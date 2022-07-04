@@ -10,6 +10,8 @@
 </head>
 <body>
     <button onclick="showSnack()">show</button>
+    <button onclick="showErrorSnack()">show</button>
+    <button onclick="showWarnSnack()">show</button>
 
     <script>
         function showSnack() {
@@ -17,6 +19,25 @@
                 {
                     message: 'Hello World',
                     duration: 5000,
+                }
+            );
+
+        }
+        function showErrorSnack() {
+            new Snack(
+                {
+                    message: 'Hello World',
+                    duration: 5000,
+                    type: 'error'
+                }
+            );
+        }
+        function showWarnSnack() {
+            new Snack(
+                {
+                    message: 'Hello World',
+                    duration: 5000,
+                    type: 'warning'
                 }
             );
         }
